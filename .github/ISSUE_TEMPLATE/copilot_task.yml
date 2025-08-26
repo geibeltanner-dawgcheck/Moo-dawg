@@ -1,0 +1,178 @@
+name: 🤖 Copilot Task
+description: Request assistance from GitHub Copilot for development tasks
+title: "[Copilot] "
+labels: ["copilot", "automation"]
+assignees: ["Copilot"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🦸‍♂️ **Copilot Superhero at your service!** 
+        
+        Use this template to request specific development tasks, code reviews, or automation from GitHub Copilot.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: 🎯 Task Type
+      description: What type of task do you need help with?
+      options:
+        - Code Review
+        - Bug Fix
+        - Feature Implementation
+        - Refactoring
+        - Testing
+        - Documentation
+        - Performance Optimization
+        - Security Audit
+        - Deployment/CI-CD
+        - Code Generation
+        - Architecture Guidance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: task-description
+    attributes:
+      label: 📝 Task Description
+      description: Describe what you need Copilot to do
+      placeholder: |
+        Please be specific about:
+        - What needs to be done
+        - Which files are involved
+        - Expected outcome
+        - Any constraints or requirements
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚨 Priority
+      description: How urgent is this task?
+      options:
+        - Low - When you have time
+        - Medium - Next few days
+        - High - This week
+        - Critical - ASAP
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected-areas
+    attributes:
+      label: 📂 Affected Areas
+      description: Which parts of the application are involved?
+      options:
+        - label: Frontend (HTML/CSS/JavaScript)
+        - label: Application Logic (app.js)
+        - label: Legacy Code (Nijnu.js)
+        - label: Styling (styles.css)
+        - label: PWA Configuration (manifest.json, service-worker.js)
+        - label: GitHub Workflows
+        - label: Documentation
+        - label: Configuration Files
+        - label: Assets/Images
+
+  - type: textarea
+    id: files-involved
+    attributes:
+      label: 📁 Specific Files
+      description: List the specific files that need to be modified or reviewed
+      placeholder: |
+        - index.html
+        - app.js (lines 100-150)
+        - styles.css (.form-section)
+        
+  - type: textarea
+    id: requirements
+    attributes:
+      label: ✅ Requirements & Constraints
+      description: Any specific requirements, constraints, or guidelines to follow
+      placeholder: |
+        - Must maintain backward compatibility
+        - Follow existing code patterns
+        - Ensure mobile responsiveness
+        - Maintain HIPAA compliance considerations
+        - Keep performance optimized
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: 🎯 Expected Outcome
+      description: What should be the result after completion?
+      placeholder: |
+        After this task is complete:
+        - Feature X should work as described
+        - Bug Y should be resolved
+        - Code should be cleaner/faster/more maintainable
+        - Tests should pass
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📚 Additional Context
+      description: Any additional context, background, or related information
+      placeholder: |
+        - Related issues or PRs
+        - Background on why this is needed
+        - Links to documentation or examples
+        - Previous attempts or solutions tried
+
+  - type: checkboxes
+    id: testing-requirements
+    attributes:
+      label: 🧪 Testing Requirements
+      description: What testing should be done?
+      options:
+        - label: Manual testing of functionality
+        - label: Cross-browser compatibility testing
+        - label: Mobile/responsive testing
+        - label: PWA functionality testing
+        - label: Performance testing
+        - label: Accessibility testing
+        - label: Data persistence testing
+        - label: Form validation testing
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: 🏆 Success Criteria
+      description: How will we know this task is successfully completed?
+      placeholder: |
+        This task will be considered complete when:
+        - [ ] All requirements are met
+        - [ ] Code follows project standards
+        - [ ] Testing has been performed
+        - [ ] Documentation is updated (if needed)
+        - [ ] No new bugs are introduced
+
+  - type: checkboxes
+    id: copilot-permissions
+    attributes:
+      label: 🔑 Copilot Permissions
+      description: Confirm the permissions needed for this task
+      options:
+        - label: Read/write access to repository files
+        - label: Create/modify GitHub workflows
+        - label: Update documentation
+        - label: Manage issues and pull requests
+        - label: Deploy preview environments
+        - label: Run automated tests
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Pre-submission Checklist
+      description: Please confirm before submitting
+      options:
+        - label: I have provided clear and specific requirements
+          required: true
+        - label: I have identified the affected files and areas
+          required: true
+        - label: I understand this task will be handled by automated Copilot workflows
+          required: true
+        - label: I have set appropriate priority and expectations
+          required: true

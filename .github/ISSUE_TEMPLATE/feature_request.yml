@@ -1,0 +1,159 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for the DAWGCHECK Trainer
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature! We appreciate your ideas to improve the DAWGCHECK Trainer application.
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: ✨ Feature Summary
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: Briefly describe the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: 🎯 Problem Statement
+      description: What problem would this feature solve?
+      placeholder: |
+        As a [user type], I want [goal] so that [benefit].
+        
+        Current pain point: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe the solution you'd like to see
+      placeholder: Detailed description of how this feature should work...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternative Solutions
+      description: Describe any alternative solutions or features you've considered
+      placeholder: Other ways this could be implemented or alternative approaches...
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: 📂 Feature Category
+      description: What category does this feature fall into?
+      options:
+        - User Interface/UX
+        - Form Functionality
+        - Data Management
+        - Validation System
+        - Premium Calculation
+        - Authentication/Security
+        - PWA/Mobile Features
+        - Reporting/Analytics
+        - Integration
+        - Performance
+        - Accessibility
+        - Documentation
+        - Developer Tools
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚀 Priority Level
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for workflow
+        - Critical - Blocking current usage
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: ⚡ Estimated Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Low - Small change or addition
+        - Medium - Moderate development effort
+        - High - Significant development required
+        - Unknown - Not sure about complexity
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: 👥 User Stories
+      description: Describe how different users would interact with this feature
+      placeholder: |
+        **As a producer**, I want to ... so that ...
+        **As an administrator**, I want to ... so that ...
+        **As a client**, I want to ... so that ...
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: What criteria must be met for this feature to be considered complete?
+      placeholder: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: 🎨 Mockups/Screenshots
+      description: If applicable, add mockups, wireframes, or example screenshots
+      placeholder: Drag and drop images here or paste them
+
+  - type: checkboxes
+    id: impact-areas
+    attributes:
+      label: 📊 Impact Areas
+      description: Which areas of the application would this feature affect?
+      options:
+        - label: Login/Authentication
+        - label: Form Fields and Validation
+        - label: Navigation/Stepper
+        - label: Premium Calculation
+        - label: Data Storage/Persistence
+        - label: Mobile/Responsive Design
+        - label: PWA Functionality
+        - label: Accessibility
+        - label: Performance
+        - label: Security/HIPAA Compliance
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context, research, or examples about the feature request
+      placeholder: Links to similar features, research data, competitor examples, etc.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched for existing feature requests before creating this one
+          required: true
+        - label: This feature aligns with the application's purpose and goals
+          required: true
+        - label: I have provided sufficient detail for implementation consideration
+          required: true

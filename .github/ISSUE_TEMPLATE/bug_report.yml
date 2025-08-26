@@ -1,0 +1,134 @@
+name: 🐛 Bug Report
+description: Report a bug in the DAWGCHECK Trainer application
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much detail as possible to help us resolve the issue quickly.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: ❌ Actual Behavior
+      description: A clear and concise description of what actually happened.
+      placeholder: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📷 Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: Drag and drop images here or paste them
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: 📱 Device Type
+      description: What device are you using?
+      options:
+        - Desktop
+        - Mobile Phone
+        - Tablet
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: 🌐 Browser
+      description: What browser are you using?
+      placeholder: e.g., Chrome 120, Safari 17, Firefox 121
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 🔗 URL
+      description: What URL were you on when the bug occurred?
+      placeholder: e.g., http://localhost:8000 or https://username.github.io/Moo-dawg/
+
+  - type: dropdown
+    id: application-step
+    attributes:
+      label: 📋 Application Step
+      description: Which step of the application were you on?
+      options:
+        - Login
+        - Producer Information
+        - Proposed Insured
+        - Confirm Identity
+        - HIPAA Lock
+        - HIPAA Signature Method
+        - Proposed Insured Continued
+        - Plan Selection
+        - Pre-Approval Information
+        - Underwriting
+        - Beneficiaries
+        - Premium Summary
+        - Billing
+        - Validate & Lock Data
+        - Attachments
+        - Signature Method
+        - Producer Statement
+        - Welcome Consent
+        - Final Submission
+        - Other/Not applicable
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about the problem here.
+      placeholder: Any additional information that might help...
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched for existing issues before creating this one
+          required: true
+        - label: I have provided all the required information above
+          required: true
+        - label: This bug is reproducible
+          required: true

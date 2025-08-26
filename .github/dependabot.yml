@@ -1,0 +1,67 @@
+version: 2
+updates:
+  # GitHub Actions workflow dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "geibeltanner-dawgcheck"
+    assignees:
+      - "Copilot"
+    commit-message:
+      prefix: "🔄"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "copilot"
+
+  # NPM dependencies (if package.json is added in the future)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "geibeltanner-dawgcheck"
+    assignees:
+      - "Copilot"
+    commit-message:
+      prefix: "📦"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "npm"
+      - "copilot"
+    # Ignore patch updates for major framework dependencies to reduce noise
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    # Group related updates together
+    groups:
+      development-dependencies:
+        patterns:
+          - "@types/*"
+          - "eslint*"
+          - "prettier*"
+          - "*-dev"
+          - "*-cli"
+      build-dependencies:
+        patterns:
+          - "webpack*"
+          - "rollup*"
+          - "vite*"
+          - "esbuild*"
+      testing-dependencies:
+        patterns:
+          - "jest*"
+          - "vitest*"
+          - "cypress*"
+          - "playwright*"
+          - "@testing-library/*"
