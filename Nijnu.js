@@ -1,4 +1,4 @@
-/* DAWGCHECK Training Simulator - Main JavaScript */
+/* MOO Insurance Training Simulator - Main JavaScript */
 const $ = (s, el=document) => el.querySelector(s);
 const $$ = (s, el=document) => [...el.querySelectorAll(s)];
 const stateKey = "dc-form";

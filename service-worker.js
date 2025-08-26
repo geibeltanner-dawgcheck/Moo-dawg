@@ -1,5 +1,5 @@
-// DAWGCHECK Training Simulator – Service Worker (fixed asset names)
-const CACHE = 'dawgcheck-cache-v4';
+// MOO Insurance Training Simulator – Service Worker (fixed asset names)
+const CACHE = 'moo-insurance-cache-v4';
 const ASSETS = [
   './',
   './index.html',

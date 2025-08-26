@@ -1,4 +1,4 @@
-/* DAWGCHECK Training Simulator – Polished Replica (2025-08-25)
+/* MOO Insurance Training Simulator – Polished Replica (2025-08-25)
    Improvements:
    - Sidebar status badges (locks, sent, totals, premium)
    - Error summary banner + scroll to first invalid
@@ -272,7 +272,7 @@ $('#btn-hipaa-send')?.addEventListener('click', ()=>{
 /* ---------- Policies Tables ---------- */
 function policyRow(id, carrier=false){
   return `<tr data-id="${id}">
-    <td><input ${carrier?'value="Mutual of Omaha"':''} /></td>
+    <td><input ${carrier?'value="Moo Insurance"':''} /></td>
     <td><input /></td>
     <td><input class="mask-money" placeholder="$20,000" /></td>
     <td>${carrier?'<select><option>Yes</option><option>No</option></select>':'<select><option>Life</option><option>Annuity</option></select>'}</td>
@@ -691,7 +691,7 @@ $('#signed-city')?.addEventListener('input', updateApplyEsignEnabled);
 $('#welcome-consent-check')?.addEventListener('change', updateApplyEsignEnabled);
 
 /* ---------- Persistence ---------- */
-const STORAGE_KEY = 'dawgcheck-app-state-v2';
+const STORAGE_KEY = 'moo-insurance-app-state-v2';
 function saveState(){
   try{
     const values = {};
